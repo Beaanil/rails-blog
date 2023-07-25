@@ -1,0 +1,14 @@
+<%= form_with model: [ @article, @article.comments.build ] do |form| %>
+    <p style="color:white">
+      <%= form.label :commenter  %><br>
+      <%= form.text_field :commenter %>
+    </p>
+    <p style="color:white">
+      <%= form.label :body %><br>
+      <%= form.text_area :bodytext %>
+    </p>
+    <p>
+      <%= form.submit %>
+    </p>
+  <% end %>
+  

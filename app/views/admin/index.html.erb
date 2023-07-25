@@ -1,0 +1,12 @@
+<h1>Admin Login</h1>
+<p class="text-danger"><%=  flash[:notice] %></p>
+<%= form_with url: "/admin/index", method: :post  do |form|%>  
+<span class="text-warning"><%= form.label :username, "Username:" %></span>
+<%= form.text_field :username%>
+
+<span class="text-warning"><%= form.label :password, "Password:" %></span>
+<%= form.password_field :password%>
+
+<%= form.submit "submit" %>
+
+<% end %>
